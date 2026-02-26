@@ -6,12 +6,11 @@
   <br />
   <br />
 
-  <h1>Modern Smartphone for FiveM</h1>
+  <h1>Modern Phone for FiveM</h1>
 
   <p>
     <b>High Performance</b> • <b>Pixel Perfect</b> • <b>Developer Friendly</b>
   </p>
-
 
   <div align="center">
     <!-- Tech Stack Badges -->
@@ -32,12 +31,12 @@
 
 ## 🔥 Key Features
 
-| 🍎 **Modern Interface** | ⚡ **Blazing Fast** | 🛠️ **Developer First** |
-| :--- | :--- | :--- |
+| 🍎 **Modern Interface**                                                                     | ⚡ **Blazing Fast**                                                               | 🛠️ **Developer First**                                                                  |
+| :------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
 | Pixel-perfect animations, blur effects, and fluid gestures mimicking real high-end devices. | Optimized `0.01ms` idle usage. React 19 & Vite ensure instant NUI response times. | Written in TypeScript. Full mock mode for browser development without restarting FiveM. |
 
-| 🔄 **Auto Sync** | 🎮 **Game Integration** | 🧩 **Modular Apps** |
-| :--- | :--- | :--- |
+| 🔄 **Auto Sync**                                                                       | 🎮 **Game Integration**                                                            | 🧩 **Modular Apps**                                                              |
+| :------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
 | Real-time session synchronization with MySQL database. Never lose settings on restart. | Physical prop animation, sprint-while-using support, and camera locking mechanism. | Apps are auto-discovered via filesystem. Just drop a folder to create a new app. |
 
 ---
@@ -64,9 +63,10 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
-*   Node.js 20+
-*   pnpm (`npm i -g pnpm`)
-*   FiveM Server (Optional for browser dev)
+
+- Node.js 20+
+- pnpm (`npm i -g pnpm`)
+- FiveM Server (Optional for browser dev)
 
 ### 💻 Development Workflow (Recommended)
 
@@ -79,6 +79,7 @@ pnpm install
 # 2. Start the dev server
 pnpm --filter @dw/phone dev
 ```
+
 > Open `http://localhost:5173` to start coding.
 
 ### 🎮 Deploy to FiveM
@@ -102,11 +103,11 @@ We use a **monorepo** architecture to separate concerns.
 <details>
 <summary><b>Click to expand folder structure</b></summary>
 
-| Path | Description |
-| :--- | :--- |
-| `packages/core` | **Shared Logic:** Type definitions, Zod schemas, event constants used by both Client & UI. |
-| `packages/phone` | **The Frontend:** React + Vite application. Contains all apps, stores, and hooks. |
-| `packages/fivem` | **The Bridge:** Lua/TS Runtime. Handles NUI focus, database sync, props, and animations. |
+| Path             | Description                                                                                |
+| :--------------- | :----------------------------------------------------------------------------------------- |
+| `packages/core`  | **Shared Logic:** Type definitions, Zod schemas, event constants used by both Client & UI. |
+| `packages/phone` | **The Frontend:** React + Vite application. Contains all apps, stores, and hooks.          |
+| `packages/fivem` | **The Bridge:** Lua/TS Runtime. Handles NUI focus, database sync, props, and animations.   |
 
 </details>
 
@@ -115,6 +116,7 @@ We use a **monorepo** architecture to separate concerns.
 ## ✅ Feature Status
 
 ### 📱 Applications
+
 - [x] **Settings:** Wi-Fi, Bluetooth, Wallpaper, Ringtone, Display.
 - [x] **Contacts:** Create, Edit, Delete (Local & Synced).
 - [ ] **Messages:** Chat UI (WIP).
@@ -122,6 +124,7 @@ We use a **monorepo** architecture to separate concerns.
 - [ ] **Bank:** Transactions history (Stub).
 
 ### ⚙️ System
+
 - [x] **Dynamic Island:** Notification & Status indicators.
 - [x] **Setup Wizard:** First-time user experience.
 - [x] **Notifications:** System-wide push notifications.

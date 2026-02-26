@@ -1,8 +1,8 @@
-# 📦 dw-releases
-
 <div align="center">
 
-<img src="assets/horizontal-brand.png" alt="dw-scripts" width="600" />
+<img src="assets/horizontal-brand.png" alt="dw-scripts" width="800" />
+
+<h1>📦 dw-releases</h1>
 
 **Public project index for all dw-scripts packages.**
 

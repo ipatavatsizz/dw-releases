@@ -1,141 +1,158 @@
 <div align="center">
   <a href="https://phone.dwscripts.dev">
-    <img src="assets/logo-h-colored.svg" alt="dw-phone Logo" width="300">
+    <img src="assets/logo-h-colored.svg" alt="DW Phone logo" width="320">
   </a>
 
   <br />
   <br />
 
-  <h1>Modern Phone for FiveM</h1>
+  <h1>DW Phone</h1>
 
   <p>
-    <b>High Performance</b> • <b>Pixel Perfect</b> • <b>Developer Friendly</b>
+    A high-fidelity phone system built with one goal in mind:
+    to become the best phone experience available for FiveM.
   </p>
 
-  <div align="center">
-    <!-- Tech Stack Badges -->
+  <p>
+    <b>React 19</b> • <b>TypeScript</b> • <b>FiveM Native Integration</b> • <b>Developer-Friendly Monorepo</b>
+  </p>
+
+  <p>
     <img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/Vite_7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-    <br/>
-    <img src="https://img.shields.io/badge/Zustand-Bear-brown?style=for-the-badge" alt="Zustand" />
-    <img src="https://img.shields.io/badge/Framer_Motion-Pink?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
-    <img src="https://img.shields.io/badge/FiveM-Ready-orange?style=for-the-badge&logo=rockstar-games&logoColor=white" alt="FiveM" />
-  </div>
+    <img src="https://img.shields.io/badge/Tailwind_4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/FiveM-Ready-orange?style=for-the-badge&logo=rockstargames&logoColor=white" alt="FiveM" />
+    <img src="https://img.shields.io/badge/Zustand-State-brown?style=for-the-badge" alt="Zustand" />
+    <img src="https://img.shields.io/badge/Motion-Animated-pink?style=for-the-badge" alt="Motion" />
+  </p>
 </div>
 
-<br />
+---
+
+## Why DW Phone?
+
+Most FiveM phone resources either look modern or behave like a real system. DW Phone is built to do both.
+
+It combines a polished mobile UI, real client/server contracts, and gameplay-facing systems such as calling, messaging, camera capture, notifications, persistent session state, and deeper in-world interaction flow.
+
+The goal is not to ship "just another phone script." The goal is to build a phone that feels premium in the player's hand, reliable under real server usage, and strong enough to stand as the benchmark for what a FiveM phone can be.
 
 ---
 
-## 🔥 Key Features
+## What You Get
 
-| 🍎 **Modern Interface**                                                                     | ⚡ **Blazing Fast**                                                               | 🛠️ **Developer First**                                                                  |
-| :------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
-| Pixel-perfect animations, blur effects, and fluid gestures mimicking real high-end devices. | Optimized `0.01ms` idle usage. React 19 & Vite ensure instant NUI response times. | Written in TypeScript. Full mock mode for browser development without restarting FiveM. |
-
-| 🔄 **Auto Sync**                                                                       | 🎮 **Game Integration**                                                            | 🧩 **Modular Apps**                                                              |
-| :------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
-| Real-time session synchronization with MySQL database. Never lose settings on restart. | Physical prop animation, sprint-while-using support, and camera locking mechanism. | Apps are auto-discovered via filesystem. Just drop a folder to create a new app. |
+- A premium-feeling phone UI with smooth transitions, overlays, notifications, lock screen, recent apps, and Dynamic Island behavior.
+- Real app flows for Contacts, Messages, Camera, Gallery, Settings, App Store, and Phone interactions.
+- End-to-end call flow with `pma-voice` integration.
+- Server-backed messaging with conversations, participants, unread state, and live delivery.
+- Camera pipeline with in-game screenshot upload and gallery persistence.
+- Shared `core` contracts between frontend, FiveM client, and FiveM server.
+- A monorepo structure that keeps product code, bridge code, and shared types separated cleanly.
+- Browser mock support for fast UI iteration during development.
 
 ---
 
-## 📸 Screenshots
+## Highlights
+
+| Area              | What it means in practice                                                                                  |
+| :---------------- | :--------------------------------------------------------------------------------------------------------- |
+| UI quality        | Smooth animations, modern layouts, blur, overlays, lock screen, status bar, and responsive app transitions |
+| Real systems      | Calls, messages, notifications, camera capture, gallery persistence, and phone session sync                |
+| FiveM integration | Physical phone behavior, NUI bridge, server sync, camera flow, and voice channel handling                  |
+| Extensibility     | Shared types, modular app manifests, and cleaner routing/deep-link infrastructure                          |
+| Development       | Fast browser-side iteration with a codebase designed to scale into a larger product                        |
+
+---
+
+## Screenshots
 
 <div align="center">
   <table>
     <tr>
       <td align="center"><b>Lock Screen</b></td>
       <td align="center"><b>Setup Wizard</b></td>
-      <td align="center"><b>Settings App</b></td>
+      <td align="center"><b>Settings</b></td>
     </tr>
     <tr>
       <td><img src="assets/lockscreen.png" width="250" alt="Lock Screen"></td>
       <td><img src="assets/setupwizard.png" width="250" alt="Setup Wizard"></td>
-      <td><img src="assets/settingsapp.png" width="250" alt="Settings App"></td>
+      <td><img src="assets/settingsapp.png" width="250" alt="Settings"></td>
     </tr>
   </table>
 </div>
 
 ---
 
-## 🚀 Getting Started
+## Architecture
 
-### Prerequisites
+DW Phone is organized as a workspace monorepo with clear responsibility boundaries.
 
-- Node.js 20+
-- pnpm (`npm i -g pnpm`)
-- FiveM Server (Optional for browser dev)
+| Path             | Responsibility                                                                                          |
+| :--------------- | :------------------------------------------------------------------------------------------------------ |
+| `core/`          | Shared event names, RPC contracts, app types, domain models, and common types used across the stack     |
+| `phone/`         | React/Vite frontend, app UIs, state stores, routing, overlays, theming, and browser mock support        |
+| `fivem/`         | FiveM bridge layer, NUI callbacks, client/server runtime code, DB integration, and game-facing behavior |
+| `release-notes/` | Local release note copies used during development                                                       |
+| `scripts/`       | Root build and watch orchestration for bundling the full resource                                       |
 
-### 💻 Development Workflow (Recommended)
-
-Work strictly in the browser. It mocks all FiveM natives and data.
-
-```bash
-# 1. Install dependencies
-pnpm install
-
-# 2. Start the dev server
-pnpm --filter @dw/phone dev
-```
-
-> Open `http://localhost:5173` to start coding.
-
-### 🎮 Deploy to FiveM
-
-When you are ready to test in-game:
-
-1.  Create a `.env` file in root (copy `.env.example`).
-2.  Set `DW_OUTDIR` to your server's resource folder.
-3.  Run:
-
-```bash
-pnpm run build:all
-```
+This separation is one of the main reasons the project stays workable as features grow.
 
 ---
 
-## 📦 Project Structure
+## Requirements
 
-We use a **monorepo** architecture to separate concerns.
-
-<details>
-<summary><b>Click to expand folder structure</b></summary>
-
-| Path             | Description                                                                                |
-| :--------------- | :----------------------------------------------------------------------------------------- |
-| `packages/core`  | **Shared Logic:** Type definitions, Zod schemas, event constants used by both Client & UI. |
-| `packages/phone` | **The Frontend:** React + Vite application. Contains all apps, stores, and hooks.          |
-| `packages/fivem` | **The Bridge:** Lua/TS Runtime. Handles NUI focus, database sync, props, and animations.   |
-
-</details>
+- Node.js 22+
+- `pnpm`
+- A FiveM server for in-game testing
+- `oxmysql` on the server side
+- `pma-voice` for call channel handling
+- `screencapture` for in-game photo capture uploads
 
 ---
 
-## ✅ Feature Status
+## Current Product Scope
 
-### 📱 Applications
+Already present in the project today:
 
-- [x] **Settings:** Wi-Fi, Bluetooth, Wallpaper, Ringtone, Display.
-- [x] **Contacts:** Create, Edit, Delete (Local & Synced).
-- [ ] **Messages:** Chat UI (WIP).
-- [ ] **Camera:** Photo taking (WIP).
-- [ ] **Bank:** Transactions history (Stub).
+- Contacts management
+- Calling flow with active, incoming, and outgoing call UI
+- Messaging flow with conversations and live updates
+- Camera app and gallery persistence flow
+- Settings app and system preferences
+- Dynamic Island and system overlays
+- Lock screen and setup flow
+- Notification system and deep-link-driven app opening
+- Supporting browser mock mode for frontend development
 
-### ⚙️ System
+Still evolving:
 
-- [x] **Dynamic Island:** Notification & Status indicators.
-- [x] **Setup Wizard:** First-time user experience.
-- [x] **Notifications:** System-wide push notifications.
-- [x] **Status Bar:** Battery, Signal, Time.
+- broader app ecosystem
+- additional system integrations
+- further polish on media, economy, and extensibility
+
+The long-term direction is simple: tighter gameplay integration, stronger app ecosystems, and a phone that feels less like an overlay and more like a real in-game device.
 
 ---
 
-## 🤝 Contributing
+## Release Notes
 
-This is a private project.
+Release notes and developer logs are maintained in the dedicated `dw-releases` repository under the `dw-phone/release-notes` section.
+
+---
+
+## Notes
+
+- This is a private project.
+- Browser support exists to improve development speed, not to define the product's identity.
+- The real north star is building the most complete, polished, and convincing phone experience possible for FiveM.
+- The resource currently targets a modern stack and expects a reasonably up-to-date FiveM server environment.
+
+---
 
 <div align="center">
-  <sub>Built with ❤️ by dw-scripts</sub>
+  <sub>Built by dw-scripts</sub>
 </div>
